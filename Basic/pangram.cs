@@ -13,26 +13,26 @@ public class Result
         var alphaArray = new int[26];
         var totalKeyFound = 0;
         
-		var processCharAscii = (int index, char character, int charAscii) => {
-			if(character != ' ' && alphaArray[index] == 0){
-               totalKeyFound++; 
-			   alphaArray[index] = charAscii;
-            }
-		};
+	var processCharAscii = (int index, char character, int charAscii) => {
+		if(character != ' ' && alphaArray[index] == 0){
+               		totalKeyFound++; 
+			alphaArray[index] = charAscii;
+            	}
+	};
 		
         for(var i=0; i< characters.Length; i++) {
-            var leftCharAsci = (int)characters[i];
-			processCharAscii(leftCharAsci-97, characters[i], leftCharAsci);
+            var leftCharAsci = (int)characters[I];
+		processCharAscii(leftCharAsci-97, characters[i], leftCharAsci);
             
-            if(i >= reverseIndex) {
+            if(i >= reverseIndex || totalKeyFound == 26) {
                 break;
             }
             
             var rightCharAsci = (int)characters[reverseIndex];
-			processCharAscii(rightCharAsci-97, characters[reverseIndex], rightCharAsci);
+	    processCharAscii(rightCharAsci-97, characters[reverseIndex], rightCharAsci);
 			
-			reverseIndex--;
-        }
+	    reverseIndex--;
+	}
         
         return totalKeyFound == 26 ? "pangram": "not pangram";
     }
