@@ -17,10 +17,10 @@ Returns
     int: the unsigned decimal integer result
 */
 
-using System.Linq;
 using System;
+using System.Linq;
 
-class Result
+internal class FlipBitsOfNumbers
 {
 
     public static long flippingBits(long n)
@@ -32,17 +32,14 @@ class Result
 
         return Convert.ToInt64(flipped, 2);
     }
-}
 
-class Solution
-{
-    public static void Main(string[] args)
+    public static void Main()
     {
         for (int qItr = 0; qItr < 3; qItr++)
         {
             long n = Convert.ToInt64(Console.ReadLine().Trim());
 
-            long result = Result.flippingBits(n);
+            long result = FlipBitsOfNumbers.flippingBits(n);
 
             Console.WriteLine(result);
         }

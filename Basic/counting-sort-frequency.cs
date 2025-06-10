@@ -13,14 +13,14 @@ All of the values are in the range , so create an array of zeros, result = [0, 0
 The frequency array is [0, 3, . These values can be used to create the sorted array as well: 
 */
 
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
-class Result
+internal class Result
 {
-   public static List<int> countingSort(List<int> arr)
+    public static List<int> countingSort(List<int> arr)
     {
         int[] frequency = new int[100];
         var rightIndex = arr.Count - 1;
@@ -44,7 +44,7 @@ class Result
 
     }
 
-    public static void Main(string[] args)
+    public static void Main()
     {
         var numberArray = "1 2 3 4 5 6 7 8 9 10 1 2 3 4 5 6 7 8 9 9".Split(' ');
         var flippingBit = countingSort(numberArray.Select(t => System.Convert.ToInt32(t)).ToList());

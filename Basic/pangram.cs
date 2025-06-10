@@ -4,7 +4,7 @@ Ignore case. Return either pangram or not pangram as appropriate.
 */
 using System;
 
-public class Result
+public class Pangram
 {
     public static string pangrams(string s)
     {
@@ -12,40 +12,40 @@ public class Result
         var reverseIndex = characters.Length - 1;
         var alphaArray = new int[26];
         var totalKeyFound = 0;
-        
-	var processCharAscii = (int index, char character, int charAscii) => {
-		if(character != ' ' && alphaArray[index] == 0){
-               		totalKeyFound++; 
-			alphaArray[index] = charAscii;
-            	}
-	};
-		
-        for(var i=0; i< characters.Length; i++) {
-            var leftCharAsci = (int)characters[I];
-		processCharAscii(leftCharAsci-97, characters[i], leftCharAsci);
-            
-            if(i >= reverseIndex || totalKeyFound == 26) {
+
+        var processCharAscii = (int index, char character, int charAscii) =>
+        {
+            if (character != ' ' && alphaArray[index] == 0)
+            {
+                totalKeyFound++;
+                alphaArray[index] = charAscii;
+            }
+        };
+
+        for (var i = 0; i < characters.Length; i++)
+        {
+            var leftCharAsci = (int)characters[i];
+            processCharAscii(leftCharAsci - 97, characters[i], leftCharAsci);
+
+            if (i >= reverseIndex || totalKeyFound == 26)
+            {
                 break;
             }
-            
-            var rightCharAsci = (int)characters[reverseIndex];
-	    processCharAscii(rightCharAsci-97, characters[reverseIndex], rightCharAsci);
-			
-	    reverseIndex--;
-	}
-        
-        return totalKeyFound == 26 ? "pangram": "not pangram";
-    }
-}
 
-public class Solution
-{
-    public static void Main(string[] args)
+            var rightCharAsci = (int)characters[reverseIndex];
+            processCharAscii(rightCharAsci - 97, characters[reverseIndex], rightCharAsci);
+
+            reverseIndex--;
+        }
+
+        return totalKeyFound == 26 ? "pangram" : "not pangram";
+    }
+    public static void Main()
     {
-        string result = Result.pangrams("We promptly judged antique ivory buckles for the prize");
+        string result = Pangram.pangrams("We promptly judged antique ivory buckles for the prize");
         Console.WriteLine(result);
-		
-		string result1 = Result.pangrams("the quick brown fox jumnps over a lazy dog");
+
+        string result1 = Pangram.pangrams("the quick brown fox jumnps over a lazy dog");
         Console.WriteLine(result1);
     }
 }

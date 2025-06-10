@@ -13,11 +13,11 @@ Returns
     int: the element that occurs only once
 */
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
 
-class Result
+internal class UniqueFromArray
 {
     public static int lonelyinteger(List<int> a)
     {
@@ -40,16 +40,12 @@ class Result
         return result.Key;
     }
 
-}
-
-class Solution
-{
-    public static void Main(string[] args)
+    public static void Main()
     {
 
         List<int> a = new List<int> { 1, 2, 3, 4, 3, 2, 1 };
 
-        int result = Result.lonelyinteger(a);
+        int result = UniqueFromArray.lonelyinteger(a);
 
         Console.WriteLine($"The unique element is {result}");
     }

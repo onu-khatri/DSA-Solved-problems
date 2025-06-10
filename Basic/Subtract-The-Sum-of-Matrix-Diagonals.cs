@@ -16,10 +16,10 @@ Return:
     int: the absolute diagonal difference
 */
 
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
-class Result
+internal class MatrixDiagonals
 {
 
     public static int diagonalDifference(List<List<int>> arr)

@@ -13,7 +13,7 @@ The hiker first enters a valley 2 units deep. Then they climb out and up onto a 
 
 using System;
 
-class Result
+internal class VallyCount
 {
     public static int countingValleys(int steps, string path)
     {
@@ -38,16 +38,13 @@ class Result
         }
         return level;
     }
-}
 
-class Solution
-{
     public static void Main(string[] args)
-    {    
+    {
         int steps = 8;
         string path = "UDDDUDUU";
 
-        int result = Result.countingValleys(steps, path);
+        int result = VallyCount.countingValleys(steps, path);
         Console.WriteLine(result);
     }
 }

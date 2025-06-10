@@ -20,11 +20,11 @@ Returns
     int[n]: the grades after rounding as appropriate
 */
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System;
 
-class Result
+internal class GradeToNextMultiple
 {
     public static List<int> gradingStudents(List<int> grades)
     {
@@ -47,13 +47,9 @@ class Result
         return grade;
     }
 
-}
-
-class Solution
-{
-    public static void Main(string[] args)
+    public static void Main()
     {
-        List<int> result = Result.gradingStudents(new List<int> {73, 67, 38, 33});
+        List<int> result = GradeToNextMultiple.gradingStudents(new List<int> { 73, 67, 38, 33 });
         Console.WriteLine(string.Join("\t", result));
     }
 }
