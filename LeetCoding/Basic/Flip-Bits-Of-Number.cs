@@ -20,6 +20,8 @@ Returns
 using System;
 using System.Linq;
 
+namespace LeetCoding.Basic;
+
 internal class FlipBitsOfNumbers
 {
 

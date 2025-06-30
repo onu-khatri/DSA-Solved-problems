@@ -24,6 +24,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+namespace LeetCoding.Basic;
+
 internal class GradeToNextMultiple
 {
     public static List<int> gradingStudents(List<int> grades)

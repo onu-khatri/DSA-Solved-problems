@@ -19,6 +19,8 @@ Return:
 using System;
 using System.Collections.Generic;
 
+namespace LeetCoding.Basic;
+
 internal class MatrixDiagonals
 {
 

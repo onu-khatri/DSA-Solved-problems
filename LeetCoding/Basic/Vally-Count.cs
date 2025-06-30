@@ -13,6 +13,8 @@ The hiker first enters a valley 2 units deep. Then they climb out and up onto a 
 
 using System;
 
+namespace LeetCoding.Basic;
+
 internal class VallyCount
 {
     public static int countingValleys(int steps, string path)

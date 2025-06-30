@@ -4,6 +4,8 @@ Ignore case. Return either pangram or not pangram as appropriate.
 */
 using System;
 
+namespace LeetCoding.Basic;
+
 public class Pangram
 {
     public static string pangrams(string s)
@@ -42,10 +44,10 @@ public class Pangram
     }
     public static void Main()
     {
-        string result = Pangram.pangrams("We promptly judged antique ivory buckles for the prize");
+        string result = pangrams("We promptly judged antique ivory buckles for the prize");
         Console.WriteLine(result);
 
-        string result1 = Pangram.pangrams("the quick brown fox jumnps over a lazy dog");
+        string result1 = pangrams("the quick brown fox jumnps over a lazy dog");
         Console.WriteLine(result1);
     }
 }

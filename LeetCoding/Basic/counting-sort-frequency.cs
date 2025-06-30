@@ -18,6 +18,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
+namespace LeetCoding.Basic;
+
 internal class Result
 {
     public static List<int> countingSort(List<int> arr)
